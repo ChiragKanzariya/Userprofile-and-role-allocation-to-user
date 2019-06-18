@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}
+SignUp:Home
+{% endblock %}
+
+{% block content %}
+
+<h2 class="text-primary">Welcome, User</h2>
+<a href="{% url 'signup_page' %}" class="btn btn-success">SignUp</a>
+<a href="{% url 'login_page' %}" class="btn btn-success">Login</a>
+
+{% endblock content %}

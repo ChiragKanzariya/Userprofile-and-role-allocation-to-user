@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <form role="form" action="{% url 'login_page' %}" method="post">
+        {% csrf_token %}
+
+        <h2>Login with detail that you have entered During Sign up.</h2>
+
+        {{ form | crispy }}
+
+        <button type="submit" class="btn btn-success">Sign in</button>
+    </form>
+
+    <div style="margin-top:50px;text-align:center;">
+        <h3>Don't Have Account than sign up here.</h3>
+        <a href="{% url 'signup_page' %}" class="btn btn-success">Sign Up</a>
+    </div>
+</div>
+{% endblock %}
