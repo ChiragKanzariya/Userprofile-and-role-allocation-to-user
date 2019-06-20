@@ -3,20 +3,20 @@ from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
-from details.models import ProfileModel
+from details.models import ProfileModel, Choice
 
 
 class ProfileForm(ModelForm):
-    DESIGNATION_CHOICES = (
-        ('P', 'Python'),
-        ('NJ', 'Node.js'),
-        ('D', 'Designer'),
-        ('AN', 'Android'),
-        ('I', 'IOS'),
-    )
+    # DESIGNATION_CHOICES = (
+    #     ('P', 'Python'),
+    #     ('NJ', 'Node.js'),
+    #     ('D', 'Designer'),
+    #     ('AN', 'Android'),
+    #     ('I', 'IOS'),
+    # )
 
-    designation = forms.MultipleChoiceField(
-        widget=forms.CheckboxSelectMultiple, choices=DESIGNATION_CHOICES)
+    # designation = forms.MultipleChoiceField(
+    #     widget=forms.CheckboxSelectMultiple)
 
     class Meta:
         model = ProfileModel

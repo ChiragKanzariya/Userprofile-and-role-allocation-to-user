@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}
+Success Page
+{% endblock %}
+
+{% block content %}
+
+<h2 class="text-primary">Your Profile is successfully created..!</h2>
+<p style="background-color: #eee; width: 300px;padding:5px 5px 5px 5px;">Click below to create again Profile page</p>
+<a href="{% url 'profile_page' %}" class="btn btn-success">New Profile</a>
+
+{% endblock content %}
